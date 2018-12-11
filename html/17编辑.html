@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<title>ATOM区块</title>
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="header">
+		<div class="left"><a href="#">编辑</a></div>
+		<div class="right"><a href="#">用户中心</a></div>
+	</div>
+	<div class="editPhoto">
+		<div class="photo"></div>
+	</div>
+
+	<div class="mask"></div>
+	<div class="editPhoto-btn">
+		<a href="javascript:void(photo());">选取照片</a>
+		<input type="file" id="photo" accept="image/*;capture=camera" style="display:none">		
+	</div>
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script>
+	function photo(){
+		$('#photo').click();
+	}
+	</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+/*header*/
+.header, .header2 { position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 4.5rem; line-height: 4.5rem; font-size: 1.5rem; }
+.header { background: #6d00a5; }
+.header2 { background: #ececff; }
+.header .left { position: absolute; left: 1rem; top: 0; }
+.header .left a { display: block; padding-left: 2rem; min-width: 2rem; height: 100%; color: #fff; background: url(../images/icon-back.png) no-repeat 0 center; background-size: 1rem; }
+.header .right { position: absolute; right: 1rem; top: 0; }
+.header .right a { display: block; padding-right: 2.5rem; min-width: 2rem; height: 100%; color: #fff; background: url(../images/icon-user.png) no-repeat right center; background-size: 2rem; text-indent: -999rem; }
+.header .center { text-align: center; width: 100%; }
+.header .center ul { margin: .7rem auto; width: 52%; border-radius: .5rem; overflow: hidden; border: #fff solid .1rem; }
+.header .center li { float: left; text-align: center; width: 50%; line-height: 3rem; font-size: 1.2rem; }
+.header .center li a { display: block; padding: 0 1rem; color: #fff; background: #6d00a5; }
+.header .center li a.cur { color: #6d00a5; background: #fff; }
+.header2 .left { position: absolute; left: 1rem; top: 0; }
+.header2 .left span { display: block; min-width: 2rem; height: 100%; color: #50385b; font-weight: bold; }
+.header2 .right { position: absolute; right: 1rem; top: 0; }
+.header2 .right a { display: block; padding-right: 2.5rem; min-width: 2rem; height: 100%; color: #50385b; background: url(../images/icon-user2.png) no-repeat right center; background-size: 2rem; text-indent: -999rem; }
+/*end header*/
+
+/*footer*/
+.footer { position: fixed; z-index: 9999; bottom: 0; left: 0; padding-top: .5rem; width: 100%; height: 4.2rem; background: url(../images/foot_bg.png) repeat-x top; background-size: auto .5rem; }
+.nav-list { background: #fff; overflow: hidden; }
+.nav-list li { float: left; width: 25%; text-align: center; }
+.nav-list li a { display: block; padding: 1rem .5rem; font-size: 1.4rem; color: #333; }
+.nav-list li a i { display: inline-block; margin-right: .5rem; width: 1.5rem; height: 1.5rem; vertical-align: middle; }
+.nav-list li a.hover { color: #50385b; }
+.icon-home { background: url(../images/icon-home.png) no-repeat; }
+.hover .icon-home { background-image: url(../images/icon-home-active.png); }
+.icon-notice { background: url(../images/icon-notice.png) no-repeat; }
+.hover .icon-notice { background-image: url(../images/icon-notice-active.png); }
+.icon-share { background: url(../images/icon-share.png) no-repeat; }
+.hover .icon-share { background-image: url(../images/icon-share-active.png); }
+.icon-olcs { background: url(../images/icon-olcs.png) no-repeat; }
+.hover .icon-olcs { background-image: url(../images/icon-olcs-active.png); }
+.icon-home, .icon-notice, .icon-share, .icon-olcs { background-size: 1.5rem; background-position: 20% 46%; }
+
+
+.slider { width: 100%; min-height: 300px; display: block; position: relative; background: #fff; overflow: hidden; }
+.slider ul { list-style: none; }
+.slider-content { float: left; width: 100%; display: block; overflow: auto; min-height: 300px; }
+.slider-content ul { float: left; width: 100%; display: block; position: relative; }
+.slider-content ul li { float: left; width: 100%; font-size: 1.4rem; }
+.slider-content ul ul li a { padding: 10px; display: block; color: #333; border-bottom: 1px solid #f3f3f3; text-transform: capitalize; }
+.slider-content ul ul li a:hover { background: #f3faff; border-color: #d5ebf9; }
+.slider-content .title { padding: 5px 0; text-indent: 10px; background: #f3f3f3; color: #ababab; width: 100%; float: left; text-transform: uppercase; }
+.slider-content .selected .title { color: #fff; background: #939393; }
+.slider .slider-nav { position: absolute; right: 0; top: 0; min-height: 300px; }
+.slider .slider-nav ul { padding: 5px 0; }
+.slider .slider-nav li a { padding: 3px 5px; line-height: 13px; text-align: center; color: #4f385c; display: block; text-transform: uppercase; cursor: pointer; }
+.slider #debug { position: absolute; bottom: 0; left: 0; padding: 5px; background: #000; color: #fff; }

@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>ATOM区块</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="coverImg"></div>
+    <div class="reg-wrap">
+        <div class="logo"><img src="images/logo.png" alt="logo"></div>
+        <div class="reg-form">
+            <form id="form1" action="#" method="post">
+                <ul>
+                    <li>
+                        <div class="icon"><img src="images/icon-phone.png" alt=""></div>
+                        <div class="val"><input type="tel" placeholder="请输入手机号" required="required" pattern="[0-9]{11}"></div>
+                        <div class="country">
+                            <select  name="">
+                                <option>中国</option>
+                                <option>中国香港</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon"><img src="images/icon-lock.png" alt=""></div>
+                        <div class="val"><input type="password" placeholder="请输入密码" required="required"></div>
+                    </li>
+                    <li>
+                        <div class="icon"><img src="images/icon-time.png" alt=""></div>
+                        <div class="val"><input type="text" placeholder="请输入邀请码" required="required"></div>
+                    </li>
+                </ul>
+                <div class="agreement">
+                    <em class="checkbox" id="reg_agree"></em>
+                    <a href="#">同意&lt;用户注册协议&gt;</a>
+                </div>
+                <div class="reg-btn">
+                    <input type="submit" value="立即注册" />
+                </div>
+            </form>
+            <div class="reg-form-text">
+                <span>or you can</span>
+            </div>
+            <div class="login-btn">
+                <a href="#">直接登录</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script>
+        $(function () {
+      
+            //用户协议勾选
+            $('.agreement em').click(function () {
+                $(this).toggleClass('checkbox');
+            });
+
+            $("#form1").submit(function () {
+                if (!$("#reg_agree").hasClass("checkbox")) {
+                    alert("注册需要同意用户协议");
+                    return false;
+                }
+                return true;
+            });  
+        });
+    </script>
+</body>
+</html>

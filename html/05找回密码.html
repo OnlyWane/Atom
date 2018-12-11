@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<title>ATOM区块</title>
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="header">
+		<div class="left"><a href="#">找回密码</a></div>
+	</div>
+	<div class="main">
+		<div class="retrieve">
+			<form action="">
+				<ul class="retrieve-list">
+					<li><input type="tel" placeholder="手机号" required="required"></li>
+					<li>
+						<input type="text" placeholder="手机验证码" required="required">
+						<div class="code" id="code"><a>获取验证码</a></div>
+					</li>
+					<li><input type="password" placeholder="新登录密码" required="required"></li>
+					<li><input type="password" placeholder="验证新登录密码" required="required"></li>
+				</ul>
+				<div class="retrieve-btn mt3">
+					<button type="submit">确定</button>
+				</div>
+			</form>
+		</div>
+	</div>
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script>
+        $(function(){
+            $("#code a").click(function(){
+                $('#code').html('<span>重发<em id="send_s">30</em>秒</span>');
+                var secs = 30;
+                for (var i = 1; i <= secs; i++) {
+                    setTimeout("again_send(" + i + "," + secs + ")", i * 1000);
+                }
+            });
+           
+        });
+
+        function again_send(num, secs) {
+            if (num == secs) {
+                $("#code").html('<a>获取验证码</a>');
+            } else {
+                $("#send_s").html((secs - num));
+            }
+        }
+       
+    </script>
+</body>
+</html>

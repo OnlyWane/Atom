@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<title>ATOM区块</title>
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="header">
+		<div class="left"><a href="#">财务</a></div>
+		<div class="center">
+			<ul>
+				<li><a href="#" class="cur">积分</a></li>
+				<li><a href="#">互赠</a></li>
+			</ul>						
+		</div>
+		<div class="right"><a href="#">用户中心</a></div>
+	</div>
+	<div class="main">
+		<div class="finance-menu">
+			<ul>
+				<li><a href="#">激活</a></li>
+				<li><a href="#">循环</a></li>
+				<li><a href="#">互转</a></li>
+				<li><a href="#" class="cur">提现</a></li>
+			</ul>
+		</div>
+		<div class="activate">
+			<input type="text" placeholder="请输入100的倍数">
+			<ul class="cash-list radio-list">
+				<li class="cur">支付宝</li>
+				<li>银行账户</li>
+				<li>比特币</li>
+			</ul>
+			<div class="btnbox">
+				<a href="#" class="btn03">提  现</a>
+			</div>
+			<div class="cashtext">
+				<h3>提示：</h3>
+				<p>平台提现人民币或比特币手续费为15%，（静、动）态金额提现100倍数起，到账24小时内，备注节假日不可提现，比特币提现根据实时汇率。</p>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<ul class="nav-list">
+			<li><a href="#" class="hover"><i class="icon-home"></i>首页</a></li>
+			<li><a href="#"><i class="icon-share"></i>分享</a></li>
+			<li><a href="#"><i class="icon-notice"></i>公告</a></li>
+			<li><a href="#"><i class="icon-olcs"></i>客服</a></li>
+		</ul>
+	</div>
+
+	<script src="js/jquery-2.1.4.min.js"></script>
+    <script>
+        $(function () {
+            //会员等级选择
+            $('.radio-list li').click(function () {
+                $('.radio-list li').eq($(this).index()).addClass('cur').siblings().removeClass('cur');
+            })
+        });
+    </script>
+</html>

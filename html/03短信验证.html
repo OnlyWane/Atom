@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>ATOM区块</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="left"><a href="#">填写验证码</a></div>
+    </div>
+    <div class="main">
+        <form action="" method="post">
+            <div class="message-text">
+                <p>验证码短信已发送至</p>
+                <h3>+86 137 9875 6554</h3>
+            </div>
+            <div class="message-code">
+                <input type="text" placeholder="请输入验证码" required="required">
+                <span>重发<em id="send_s">30</em>秒</span>
+            </div>
+            <div class="message-ps">
+                <p>验证码30分钟内输入有效</p>
+            </div>
+            <div class="message-btn">
+                <input type="submit" value="提交" />
+            </div>
+        </form>
+    </div>
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script>
+        $(function () {
+            //发送计时
+            var secs = 30;
+            for (var i = 1; i <= secs; i++) {
+                setTimeout("again_send(" + i + "," + secs + ")", i * 1000);
+            }
+        });
+        function again_send(num, secs) {
+            if (num == secs) {
+                //重发
+            } else {
+                $("#send_s").html((secs - num));
+            }
+        }
+    </script>
+</body>
+</html>

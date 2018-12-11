@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<title>ATOM区块</title>
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="header">
+		<div class="left"><a href="#">财务</a></div>
+		<div class="center">
+			<ul>
+				<li><a href="#" class="cur">积分</a></li>
+				<li><a href="#">互赠</a></li>
+			</ul>						
+		</div>
+		<div class="right"><a href="#">用户中心</a></div>
+	</div>
+	<div class="main">
+		<div class="finance-menu">
+			<ul>
+				<li><a href="#" class="cur">激活</a></li>
+				<li><a href="#">循环</a></li>
+				<li><a href="#">互转</a></li>
+				<li><a href="#">提现</a></li>
+			</ul>
+		</div>
+		<div class="activate">
+			<input type="text" placeholder="请输入下级会员编号">
+			<ul class="lvlist radio-list">
+				<li class="cur">平民：1000币</li>
+				<li>绅士：3000币</li>
+				<li>骑士：5000币</li>
+				<li>爵士：15000币</li>
+				<li>伯爵：20000币</li>
+			</ul>
+			<div class="btnbox">
+				<a href="#" class="btn01">激  活</a>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<ul class="nav-list">
+			<li><a href="#" class="hover"><i class="icon-home"></i>首页</a></li>
+			<li><a href="#"><i class="icon-share"></i>分享</a></li>
+			<li><a href="#"><i class="icon-notice"></i>公告</a></li>
+			<li><a href="#"><i class="icon-olcs"></i>客服</a></li>
+		</ul>
+	</div>
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script>
+        $(function () {
+            //会员等级选择
+            $('.radio-list li').click(function () {
+                $('.radio-list li').eq($(this).index()).addClass('cur').siblings().removeClass('cur');
+            })
+        });
+    </script>
+</html>

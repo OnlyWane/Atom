@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<title>ATOM区块</title>
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+	<div class="header">
+		<div class="left"><a href="#">团队</a></div>
+		<div class="right"><a href="#">用户中心</a></div>
+	</div>
+	<div class="main">
+		<div class="team-search">
+			<form action="">
+				<input type="search" placeholder="输入会员账号" required="required">
+				<button type="submit">搜索</button>
+			</form>
+		</div>
+		<div class="team">
+			<div class="teamnumber">您的团队成员数量：458</div>
+			<div class="team-list">
+                <ul id="tream" class="ztree"></ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<ul class="nav-list">
+			<li><a href="#" class="hover"><i class="icon-home"></i>首页</a></li>
+			<li><a href="#"><i class="icon-share"></i>分享</a></li>
+			<li><a href="#"><i class="icon-notice"></i>公告</a></li>
+			<li><a href="#"><i class="icon-olcs"></i>客服</a></li>
+		</ul>
+	</div>
+
+	<script src="js/jquery-2.1.4.min.js"></script>
+
+    <script src="js/jquery.ztree.core.min.js"></script>
+    <script>
+        $(function () {
+
+            //zTree api http://www.treejs.cn/v3/api.php
+            var setting = {
+                view: {
+                    showLine: false,
+                    showIcon: false,
+                    dblClickExpand: false
+                },
+                async: {
+                    enable: true,
+                    type:"get",
+                    url: "json/tream_tree.json",
+                    autoParam: ["id","level=lv"]
+                },
+                callback: {
+                    onClick: onClick
+                }
+            };
+            function onClick(e, treeId, treeNode) {
+                var zTree = $.fn.zTree.getZTreeObj("tream");
+                zTree.expandNode(treeNode);
+            }
+            $.fn.zTree.init($("#tream"), setting);
+        });
+    </script>
+</body>
+</html>

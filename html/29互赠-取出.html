@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<title>ATOM区块</title>
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="header">
+		<div class="left"><a href="#">互赠</a></div>
+		<div class="right"><a href="#">用户中心</a></div>
+	</div>
+	<div class="main">
+		<div class="hz-head">
+			<div class="item">
+				<img src="images/icon-hz01.png" alt="">
+				<span>经理钱包</span>
+				<p>500.00</p>
+			</div>
+			<div class="item">
+				<img src="images/icon-hz02.png" alt="">
+				<span>推荐钱包</span>
+				<p>5231.00</p>
+			</div>
+			<div class="item">
+				<img src="images/icon-hz03.png" alt="">
+				<span>本金钱包</span>
+				<p>231.00</p>
+			</div>
+		</div>
+		<div class="hz-btn">
+			<ul>
+				<li><a href="#">购  买</a></li>
+				<li><a href="#">取  出</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="footer">
+		<ul class="nav-list">
+			<li><a href="#" class="hover"><i class="icon-home"></i>首页</a></li>
+			<li><a href="#"><i class="icon-share"></i>分享</a></li>
+			<li><a href="#"><i class="icon-notice"></i>公告</a></li>
+			<li><a href="#"><i class="icon-olcs"></i>客服</a></li>
+		</ul>
+	</div>
+
+	<div class="mask"></div>
+	<div class="hz-qc-popup pop">
+		<div class="tit"><em id="btn_esc"></em>取  出</div>
+		<div class="con">
+			<form action="">
+				<ul>
+					<li><input id="txt_money" type="text" placeholder="请输入500的倍数" required="required"></li>
+					<li><button type="button" id="btn_qc">确认取出</button></li>
+				</ul>								
+			</form>
+			<div class="text">
+				<p>您的总资产：￥12000（绅士）</p>
+				<p>今日动态可提现：￥2000</p>
+				<p>&nbsp;</p>
+				<a href="#">查看提现规则></a>
+			</div>			
+		</div>
+	</div>
+
+	<script src="js/jquery-2.1.4.min.js"></script>
+    <script>
+        $(function () {
+            $('#btn_qc').click(function () {
+                if ($('#txt_money').val() % 500 != 0) {
+                    $('#txt_money').select().focus();
+                }
+            });
+            $('#btn_esc').click(function () {
+                $('.pop').hide(); $('.mask').hide();
+            });
+            
+        });
+    </script>
+</html>
